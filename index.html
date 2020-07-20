@@ -26,6 +26,7 @@
 							<p><a href="#first" class="scrolly">Titre</a> <br>
 								<a href="#Ajouter" class="scrolly">AJOUTER UN SECTEUR</a> <br>
 								<a href="#zone" class="scrolly">ZONES DE TEXTE</a> <br>
+								<a href="#yt" class="scrolly">VIDEO YOUTUBE</a> <br>
 								<a href="#site" class="scrolly">LE SITE</a> <br>
 								<a href="#pdf" class="scrolly">Version PDF</a> 
 
@@ -79,6 +80,31 @@
 							<span class="image main monborder"><img src="images/gallery/fulls/text.PNG" alt="" /></span>
 							<p><strong>La classe text-group</strong> permet d'ajouter le fond.</p>
 							<span class="image main monborder"><img src="images/gallery/fulls/textcss.PNG" alt="" /></span>
+						</div>
+					</section>
+
+					<!-- Section -->
+					<section id="yt">
+						<header>
+							<h2>Vidéo Youtube</h2>
+							
+						</header>
+						<div class="content">
+							<p>On peut facilement ajouter une vidéo de Youtube à partir de l'interface de Wordpress. Mais pour ajouter une vidéo de Youtube sans prendre plus de place qu'un boutton, il faut ajouter un<strong> bloc html</strong>.</p>
+							<span class="image main monborder"><img src="images/gallery/fulls/html.PNG" alt="" /></span>
+							<p>Il suffit ensuite de nommer le bouton et de remplacer le lien de la vidéo. <br> Le code à copier se trouve en bas de la section.</p>
+							<span class="image main monborder"><img src="images/gallery/fulls/videotitre.PNG" alt="" /></span>
+							<span class="image main monborder"><img src="images/gallery/fulls/youtubelink.PNG" alt="" /></span>
+							<p><pre><code>
+&lt;div id="button_video" class="button_video_class aligncenter"&gt;
+&lt;div class="wp-block-button"&gt;&lt;a class="wp-block-button__link"&gt;Vidéo présentation&lt;/a&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div id="div_video"&gt;
+&lt;figure id="video_frame" class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"&gt;&lt;div class="wp-block-embed__wrapper home_video"&gt;
+&lt;span class="embed-youtube" style="text-align:center; display: block;"&gt;&lt;iframe class="youtube-player" width="750" height="422" src="https://www.youtube.com/embed/9MxWRGKvPQA" allowfullscreen="true" style="border:0;"&gt;&lt;/iframe&gt;&lt;/span&gt;
+&lt;/div&gt;&lt;/figure&gt;&lt;/div&gt;
+							</code></pre></p>
 						</div>
 					</section>
 
