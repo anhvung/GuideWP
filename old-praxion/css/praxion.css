@@ -1,0 +1,155 @@
+body {color: rgba(0,56,112,1);}
+a {
+    color: rgba(0,56,112,1);
+    text-decoration: none;
+}
+.h1, h1 {
+    font-size: 34px; margin-top: 15px;
+    font-weight: 600;
+}
+.h2, h2 {
+    font-size: 28px;
+}
+.h4, h4 {
+    font-size: 16px;
+}
+h2.tel {
+    font-weight: 600;
+    color: darkred;
+}
+.text-muted {
+    color: darkred;
+}
+.text-muted a {
+    color: darkred;
+}
+.navbar-toggle .icon-bar {background-color: black}
+.navbar-static-top .nav {
+    //padding: 15px 0;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: darkred;
+    border-radius: 0;
+}
+.btn-default.red {
+    background-color: darkred;
+    color: white;
+}
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 0;
+	min-height: 390px;
+}
+.well {
+    border-radius: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-nav>li>a {font-weight: bold}
+
+footer {
+    padding: 30px 0;
+}
+
+.bleu {
+   background-color: rgb(0,60,120);
+   color: white;
+}
+.bleu a {color: white;}
+.fa.fa-facebook-official.fa-3x {padding-left: 5px;}
+.logo {margin-top: 15px; margin-bottom: 20px;}
+.titre {text-align: center;}
+
+.devis {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0,56,112,1);
+    color: white;
+}
+.devis p {margin-top: 10px;}
+
+#banner {
+    margin-left: 0px;
+    margin-right: 0px;
+    /*height: 200px;*/
+    background: rgb(255,255,255) url('../images/bandeau.png');
+    
+}
+
+#navigationbar {
+    background: white;
+    background: rgb(238,238,236);
+    background: -moz-linear-gradient(left, rgba(238,238,236,1) 0%, rgba(172,184,193,1) 44%, rgba(134,168,196,1) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(238,238,236,1)), color-stop(44%,rgba(172,184,193,1)), color-stop(100%,rgba(134,168,196,1)));
+    background: -webkit-linear-gradient(left, rgba(238,238,236,1) 0%,rgba(172,184,193,1) 44%,rgba(134,168,196,1) 100%);
+    background: -o-linear-gradient(left, rgba(238,238,236,1) 0%,rgba(172,184,193,1) 44%,rgba(134,168,196,1) 100%);
+    background: -ms-linear-gradient(left, rgba(238,238,236,1) 0%,rgba(172,184,193,1) 44%,rgba(134,168,196,1) 100%);
+    background: linear-gradient(to right, rgba(238,238,236,1) 0%,rgba(172,184,193,1) 44%,rgba(134,168,196,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeec', endColorstr='#86a8c4',GradientType=1 );
+}
+
+.container .jumbotron, .container-fluid .jumbotron { border-radius: 0}
+
+.logonf{font-size: 12px;font-weight: bold}
+.logonf img {margin-bottom: -10px}
+
+#sub-nav li a {
+display: inline-block;
+}
+#sub-nav li a:first-child {padding-right: 5px}
+
+.panel-primary {
+    border-color: rgb(0,60,120);
+    border-radius: 0;
+}
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: rgb(0,60,120);
+    border-color: rgb(0,60,120);
+    border-radius: 0;
+}
+.recherche{
+        background-color: #eee;
+        padding: 10px;
+}
+.lienrouge {
+    color: darkred;
+    text-decoration: underline;
+}
+
+@media(min-width:768px) {
+    body {
+        //padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+    .navbar-static-top .navbar-brand {
+        padding: 15px 0;
+    }
+    .navbar-right {
+        margin-right: 15px;
+    }
+    .logo {margin-top: 69px; margin-bottom: 69px;}
+    .titre {
+        margin-top: 35px;
+        margin-bottom: 65px;
+    }
+    .lead {font-size: 18px;}
+    .container .jumbotron, .container-fluid .jumbotron {
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    
+}
