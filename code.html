@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta name="robots" content="noindex" />
+		<meta name="googlebot" content="noindex" />
+		<meta name="googlebot-news" content="noindex" />
+		<meta name="googlebot" content="noindex">
+		<meta name="googlebot-news" content="nosnippet">
+		<title>Guide Wordpress pour le site Praxion.com</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					
+
+				<!-- Section -->
+					<section id="first">
+						<header>
+							<h2>Code php update</h2>
+						</header>
+						<div class="content">
+							
+							<p><code>wp_cache_set( 'updating', 'yes' );
+
+$url = 'https://jobaffinity.fr/feed/JGonWgUhkD2iIQb/json/';
+$content = file_get_contents($url);
+$decodedData = json_decode($content, true);
+
+$posts = get_posts(array(
+    'posts_per_page'  => -1
+));
+foreach( $posts as $post ) {
+  
+
+       wp_delete_post( $post->ID, true );
+     
+
+   
+}
+
+foreach ($decodedData["jobs"] as $item) {
+
+
+        //Creatte post
+        $my_post = array(
+            'post_title' => $item["title"],
+            'post_date' =>  $item["last_publication_date"],
+			'post_excerpt' =>  $item["employer_description"],
+            'post_status'       =>  'publish',
+            'ping_status' => 'closed',
+            'comment_status' => 'closed');
+        $the_post_id = wp_insert_post( $my_post );
+
+//additionnal custom fields
+        __update_post_meta( $the_post_id, 'scheduled_end_date', $item["scheduled_end_date"]);
+		__update_post_meta( $the_post_id, 'last_publication_date', $item["last_publication_date"]);
+        __update_post_meta( $the_post_id, 'cv_required', $item["cv_required"]);
+        __update_post_meta( $the_post_id, 'domain_name', $item["domain_name"]);
+        __update_post_meta( $the_post_id, 'contract_type_name', $item["contract_type_name"]);
+        __update_post_meta( $the_post_id, 'monid', $item["id"]);
+        __update_post_meta( $the_post_id, 'cover_required', $item["cover_required"]);
+        __update_post_meta( $the_post_id, 'organisation_name', $item["organisation_name"]);
+        __update_post_meta( $the_post_id, 'contract_type_abbreviation', $item["contract_type_abbreviation"]);
+        __update_post_meta( $the_post_id, 'title', $item["title"]);
+        __update_post_meta( $the_post_id, 'apply_web_url', $item["apply_web_url"]);
+        __update_post_meta( $the_post_id, 'zipcode', $item["zipcode"]);
+        __update_post_meta( $the_post_id, 'domain_id', $item["domain_id"]);
+        __update_post_meta( $the_post_id, 'location', $item["location"]);
+        __update_post_meta( $the_post_id, 'status', $item["status"]);
+        __update_post_meta( $the_post_id, 'profile_description', $item["profile_description"]);
+        __update_post_meta( $the_post_id, 'address', $item["address"]);
+        __update_post_meta( $the_post_id, 'town', $item["town"]);
+        __update_post_meta( $the_post_id, 'organisation_id', $item["organisation_id"]);
+        __update_post_meta( $the_post_id, 'url', $item["url"]);
+        __update_post_meta( $the_post_id, 'country', $item["country"]);
+        __update_post_meta( $the_post_id, 'position_description', $item["position_description"]);
+        __update_post_meta( $the_post_id, 'employer_description', $item["employer_description"]);
+       
+    
+
+}
+
+
+relevanssi_build_index();
+wp_cache_set( 'updating', 'no' );
+
+function __update_post_meta( $post_id, $field_name, $value = '' )
+{
+    if ( empty( $value ) OR ! $value )
+    {
+        delete_post_meta( $post_id, $field_name );
+    }
+    elseif ( ! get_post_meta( $post_id, $field_name ) )
+    {
+        add_post_meta( $post_id, $field_name, $value );
+    }
+    else
+    {
+        update_post_meta( $post_id, $field_name, $value );
+    }
+}
+</code></p>
+							
+
+						</div>
+					</section>
+
+				
+					<!-- Section -->
+					<section id="Archive">
+						<header>
+							<h2>Archive</h2>
+						</header>
+						<div class="content">
+							
+							<ul class="actions">
+								<li><a href="old-praxion/index2.html" class="button primary large">Ancien site</a></li>
+								<li><a href="old-praxion.zip" class="button primary large" download="">Télécharger l'ancien site</a></li>
+							</ul>
+							<ul class="actions">
+							<li><a href="index.html" class="button primary large">page principale</a></li>
+							</ul>
+						</div>
+					</section>
+				<!-- Section -->
+					<section id="pdf">
+						<header>
+							<h2>Me contacter</h2>
+						</header>
+						<div class="content">
+							
+							
+							<ul class="actions">
+								<li><a href="GUIDE PRAXION.pdf" class="button primary large" download>Télécharger en version pdf</a></li>
+								
+							</ul>
+						
+							
+						</div>
+						<footer>
+							<ul class="items">
+								<li>
+									<h3>Email</h3>
+									<a href="mailto:nguyenanhvu630@gmail.com">nguyenanhvu630@gmail.com</a>
+								</li>
+								
+								<li>
+									<h3>Autres</h3>
+									<ul class="icons">
+									
+										<li><a href="https://www.linkedin.com/in/anhvung/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/anhvung" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										
+									</ul>
+								</li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">&copy;  <a href="https://html5up.net">HTML5 UP</a>.</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
